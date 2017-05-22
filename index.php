@@ -90,6 +90,7 @@ include 'header.php';
 			<section class="field-section">
 			<form method="post" action="">
 				<input type="text" name="url" class="url" placeholder="PASTE URL, SHORTEN &amp; SHARE">
+				<div class="g-recaptcha" data-sitekey="6Le-8h4UAAAAAOVk1QBFXzK-ffY_8xQ0kZZ3KzcV"></div>
 				<input type="submit" value="Shorten">
 			</form>
 			</section>
