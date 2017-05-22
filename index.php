@@ -12,6 +12,7 @@ include 'header.php';
 	$page = YOURLS_SITE . '/index.php' ;
 
 	// Part to be executed if FORM has been submitted
+	include('captcha.php'); if ($resp != null && $resp->success) {
 	if ( isset( $_REQUEST['url'] ) && $_REQUEST['url'] != 'http://' ) {
 
 		// Get parameters -- they will all be sanitized in yourls_add_new_link()
@@ -27,7 +28,7 @@ include 'header.php';
 		$message  = isset( $return['message'] ) ? $return['message'] : '';
 		$title    = isset( $return['title'] ) ? $return['title'] : '';
 		$status   = isset( $return['status'] ) ? $return['status'] : '';
-		
+	}
 		// Stop here if bookmarklet with a JSON callback function ("instant" bookmarklets)
 		if( isset( $_GET['jsonp'] ) && $_GET['jsonp'] == 'yourls' ) {
 			$short = $return['shorturl'] ? $return['shorturl'] : '';
